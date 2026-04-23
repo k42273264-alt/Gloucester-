@@ -596,3 +596,97 @@
   position: relative;
   overflow: hidden;
 }
+
+/* Team Building Section */
+.team-building-section {
+  padding: 90px 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.team-building-container {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.team-building-content {
+  text-align: left;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.team-building-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-building-content p {
+  font-family: 'Lora', serif;
+  color: #475569;
+  line-height: 1.75;
+  margin-bottom: 15px;
+}
+
+.team-building-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.team-building-list li {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* Image styling (match cards look) */
+.team-building-image {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.team-building-image.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-building-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+  transition: transform 0.4s ease;
+}
+
+.team-building-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Button spacing */
+.team-building-content .btn-primary {
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-building-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .team-building-content {
+    text-align: center;
+  }
+
+  .team-building-image img {
+    height: 250px;
+  }
+}
